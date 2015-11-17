@@ -10,16 +10,18 @@
 <table cellpadding="0" cellspacing="1" border="0" width="100%" class="databox">
 	<tr class="blue_bg">
 		<td><strong>编号</strong></td>
-		<td><strong>名称</strong></td>
+		<td><strong>标题</strong></td>
+		<td><strong>添加人</strong></td>
 		<td><strong>操作</strong></td>
 	</tr>
 	<notempty name="list">
 	<volist name="list" id="vo">
 		<tr>
-			<td width="10%">{$vo.c_id}</td>
-			<td width="20%">{$vo.c_name}</td>	
+			<td width="10%">{$vo.n_id}</td>
+			<td width="20%">{$vo.n_title}</td>	
+			<td width="20%">{$vo.n_addadmin}</td>	
 			<td width="10%">
-				<a href="{:U('edit',array('id'=>$vo['c_id']) )}" target="_blank">修改</a>
+				<a href="{:U('edit',array('id'=>$vo['n_id']) )}" target="_blank">修改</a>
 				删除
 			</td>	
 		</tr>

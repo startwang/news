@@ -9,6 +9,13 @@
 <div class="menu">
     <ul class="menu_item">
     
+   		<li><a href="javascript:expand(2)">新闻管理</a>
+        	<ul class="meun_sub" id="submenu2"  style="display:block">
+            	<li><a href="{:U('news/add')}" target="main">添加新闻</a></li>
+                <li><a href="{:U('news/index')}" target="main">新闻列表</a></li>
+            </ul>
+        </li>
+    
         <li><a href="javascript:expand(1)">分类管理</a>
         	<ul class="meun_sub" id="submenu1"  style="display:block">
             	<li><a href="{:U('category/add')}" target="main">添加分类</a></li>

@@ -4,8 +4,19 @@ use Think\Controller;
 
 class NewsController extends AdminController {
 	
+	protected function _initialize(){
+		adminCheck( 'news' );
+	}
+	
 	public function index(){
-		
+		$news = D( 'news' );
+    	$count = $news->count();
+		$page = new \Think\Page($count,10);
+		$show=$page->show();
+		$list=$news->field(array('n_id','n_title','n_addadmin'))->order('n_id desc')->limit($page->firstRow.','.$page->listRows)->select();
+    	$this->assign('list',$list);
+		$this->assign('page',$show);
+		$this->display();
 	}
 	
 	public function add(){

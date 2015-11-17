@@ -15,7 +15,7 @@ class CategoryController extends AdminController {
 		$list=$category->field(array('c_id','c_name'))->order('c_id desc')->limit($page->firstRow.','.$page->listRows)->select();
     	$this->assign('list',$list);
 		$this->assign('page',$show);
-		$this->show();
+		$this->display();
     }
     
     public function add(){
