@@ -32,6 +32,7 @@
 			<td id="permission">
 				<input type="checkbox" value="superadmin" name="superadmin" id="superadmin"/>超级管理员 <br/>
 		    	<input type="checkbox" value="category" name="category" id="category" />新闻分类管理 <br/>
+		    	<input type="checkbox" value="news" name="news" id="news" />新闻管理 <br/>
 			</td>
 		</tr>
 		<tr>
