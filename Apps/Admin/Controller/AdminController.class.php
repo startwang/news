@@ -1,6 +1,12 @@
 <?php
 namespace Admin\Controller;
 use Think\Controller;
+
+/**
+ * 后台逻辑
+ *
+ */
+
 class AdminController extends Controller {
 	
 	protected function _initialize(){
